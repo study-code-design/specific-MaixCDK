@@ -74,7 +74,10 @@ docker run -it --network=host --hostname maixcdk-env --name maixcdk-env \
 ```
 docker exec -it --user root maixcdk-env bash
 ```
-
+如何在vscode修改docker容器启动参数,code默认以root启动
+1. 点击右边扩展*Remote Explorer* 
+2. 找到对应的容器，它下面有一些容器的细节，包括Attributes 和Mounts之类的
+3. 将鼠标移动到容器的名字上，右边会显示齿轮，点击可以跳转对应的[json文件](/home/fiz/.config/Code/User/globalStorage/ms-vscode-remote.remote-containers/imageConfigs/sipeed%2fmaixcdk-builder.json)，这个一般会存在宿主机上
 
 ## MaixCDK 开发准则
 
