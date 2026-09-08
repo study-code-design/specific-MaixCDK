@@ -62,6 +62,20 @@ MaixCDK(Maix C/CPP Development Kit) 是集成了 AI + 机器视觉 + IOT 等实�
 
 点击查看 [快速开始](./docs/doc_zh/README.md) 文档，里面包含了如何快速下载代码、编译、运行
 
+## docker 命令
+```
+docker run -it --network=host --hostname maixcdk-env --name maixcdk-env \
+  --env USER=$USER --env UID=`id -u` --env GID=`id -g` \
+  --env MAIXCDK_PATH=/home/$USER/MaixCDK \
+  -v /home/${USER}/Documents/MaixCDK:/home/$USER/MaixCDK \
+  sipeed/maixcdk-builder
+```
+默认为用户权限,如果想以root运行
+```
+docker exec -it --user root maixcdk-env bash
+```
+
+
 ## MaixCDK 开发准则
 
 为帮助开发者快速了解 MaixCDK, 以及保持长期更新的质量，在 编写 或 贡献 代码前，请务必阅读 [MaixCDK 开发准则和指导](./docs/doc_zh/convention/README.md)。
